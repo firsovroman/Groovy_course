@@ -1,10 +1,10 @@
 package lesson17
 
-import groovy.transform.ToString
-import groovy.transform.TupleConstructor
+import groovy.transform.Canonical
+import groovy.transform.builder.Builder
 
-@TupleConstructor
-@ToString
+@Canonical // TupleConstructor + ToString + EqualsAndHashCode
+@Builder
 class Student implements WithId{
 
     String firstName
