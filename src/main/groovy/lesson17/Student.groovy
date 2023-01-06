@@ -24,4 +24,14 @@ class Student implements WithId{
 
     }
 
+
+    def methodMissing(String name, Object arguments) {
+        println "missing method $name is invoked: $arguments"
+    }
+
+    def propertyMissing(String name) {
+        println "missing property $name"
+        "default value"
+    }
+
 }
