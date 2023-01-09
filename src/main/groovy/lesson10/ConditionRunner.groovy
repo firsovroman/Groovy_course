@@ -4,10 +4,10 @@ class ConditionRunner {
 
 
     /**
-     * boolean          is true
-     * Collection/Map   is not empty
+     * boolean          (is not null) && is true
+     * Collection/Map   (is not null) && (is not empty)
      * Matcher          has match
-     * String/GString   is not empty
+     * String/GString   (is not null) && (is not empty)
      * Number/Char      != 0
      * reference        != null
      *
@@ -16,9 +16,22 @@ class ConditionRunner {
 
     static void main(String[] args) {
 
+        boolean b = null
+        if(b) {
+            println('зашли в boolean часть')
+        }
+
+        List<String> list = null
+        if(list) {
+            println('зашли в List часть')
+        }
+
+        String s = ''
+        if (s) {
+            println('зашли в строковую часть')
+        }
 
         int x = 0
-
         if (x) {
             println(x)
         }
