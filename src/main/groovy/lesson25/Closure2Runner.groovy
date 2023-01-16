@@ -14,7 +14,7 @@ class Closure2Runner {
 
         // 3 основных поля замыкания
         println closure.thisObject  // объект к которому обращаемся
-        println closure.owner       // где определено замыкание
+        println closure.owner       // скоуп где определено замыкание, может быть не только классом но и другим объектом (другой Closure)
         println closure.delegate    // то же что и owner только можем изменять
 
         Student student = new Student("Ivan", "Ivanov", 29)
